@@ -1,7 +1,8 @@
 package com.harshitha.production_ready_features.production_ready_features.entities;
 
-import jakarta.persistence.*;
-import lombok.Data;
+import jakarta.persistence.Column;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.envers.Audited;
@@ -12,19 +13,22 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
-
-@Entity
 @Getter
 @Setter
-@Table(name = "post")
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 @Audited
-public class PostEntity extends AuditingEntity{
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+public class AuditingEntity {
+    @CreatedBy
+    private String createdBy;
 
-    private String title;
+    @CreatedDate
+    @Column(updatable = false)
+    private LocalDateTime createdDate;
 
-    private String description;
+    @LastModifiedBy
+    private String lastModifiedBy;
 
+    @LastModifiedDate
+    private LocalDateTime lastModifiedDate;
 }

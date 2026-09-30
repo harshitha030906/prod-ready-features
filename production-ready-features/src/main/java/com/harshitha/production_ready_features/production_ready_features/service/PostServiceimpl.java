@@ -7,6 +7,8 @@ import com.harshitha.production_ready_features.production_ready_features.reposit
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -41,6 +43,15 @@ public class PostServiceimpl implements PostService {
     @Override
     public PostDTO getPostById(@RequestParam Long id) {
         PostEntity postEntity = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("The post with Id is not found"));
+        return modelMapper.map(postEntity, PostDTO.class);
+    }
+
+    @Override
+    public PostDTO updatePostById(@RequestParam Long id, PostDTO inputPost) {
+        PostEntity olderPost = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Resource not found"));
+        inputPost.setId(id);
+        modelMapper.map(inputPost, olderPost);
+        PostEntity postEntity = postRepository.save(olderPost);
         return modelMapper.map(postEntity, PostDTO.class);
     }
 
