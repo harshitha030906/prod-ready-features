@@ -38,3 +38,44 @@
 2026-10-01 14:03:57.712 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-10-01 14:03:57.715 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-10-01 14:03:57.749 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-01 14:18:44.693 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplicationTests]: ProductionReadyFeaturesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-01 14:18:44.841 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplication for test class com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplicationTests
+2026-10-01 14:18:44.955 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplicationTests]: ProductionReadyFeaturesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-01 14:18:44.957 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplication for test class com.harshitha.production_ready_features.production_ready_features.ProductionReadyFeaturesApplicationTests
+2026-10-01 14:18:45.052 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-10-01 14:18:45.315 [main] INFO  c.h.p.p.ProductionReadyFeaturesApplicationTests - Starting ProductionReadyFeaturesApplicationTests using Java 26.0.2.1 with PID 24396 (started by HARSHITHA in C:\Users\HARSHITHA\Downloads\production-ready-features (1)\production-ready-features)
+2026-10-01 14:18:45.316 [main] INFO  c.h.p.p.ProductionReadyFeaturesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-10-01 14:18:46.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01 14:18:46.449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-10-01 14:18:47.210 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01 14:18:47.313 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01 14:18:47.680 [main] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2026-10-01 14:18:47.942 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01 14:18:47.987 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-01 14:18:48.438 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b7b0ada
+2026-10-01 14:18:48.440 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-01 14:18:48.544 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01 14:18:48.830 [main] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.harshitha.production_ready_features.production_ready_features.entities.PostEntity
+2026-10-01 14:18:49.766 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01 14:18:49.942 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01 14:18:50.187 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-01 14:18:50.424 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-01 14:18:51.132 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-10-01 14:18:51.206 [main] INFO  c.h.p.p.ProductionReadyFeaturesApplicationTests - Started ProductionReadyFeaturesApplicationTests in 6.167 seconds (process running for 8.008)
+2026-10-01 14:18:51.601 [main] INFO  c.h.p.p.c.impl.EmployeeClientImpl - Attempting to create a new employee: EmployeeDTO(employeeID=null, firstName=Roshini, lastName=Dumpa, email=roshinidumpa@gmail.com, salary=25000.0, age=21, role=USER)
+2026-10-01 14:18:51.827 [main] INFO  c.h.p.p.c.impl.EmployeeClientImpl - Attempting to get all employees
+2026-10-01 14:18:51.847 [main] INFO  c.h.p.p.c.impl.EmployeeClientImpl - Attempting to get the employee by id: 52
+2026-10-01 14:18:51.879 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01 14:18:51.883 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-01 14:18:51.891 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
